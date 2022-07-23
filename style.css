@@ -282,4 +282,44 @@ body {
     margin: 100px 0px;
     width: 310px;
 }
+.music-info{
+    background-color: rgb(177, 255, 185);
+    border-radius: 15px 15px 0 0;
+    position: absolute;
+    top: 0;
+    left: 20px;
+    width: calc(100% - 40px);
+    transform: translateY(0%);
+    opacity: 0;
+    padding: 10px 10px 10px 10px;
+    transition: transform 0.3s ease-in, opacity 0.3s ease-in;
+}
+
+.music-info h4 {
+    margin: 0;
+    display: inline;
+    font-size: 14px;
+}
+
+.music-container.play .music-info {
+    opacity: 1;
+    transform: translateY(-100%);
+}
+
+.progress-container {
+    background: rgb(254, 254, 254);
+    border-radius: 5px;
+    cursor: pointer;
+    margin:10px 0;
+    height: 4px;
+    width: 100%;
+}
+
+.progress {
+    background-color: #24fd2b;
+    border-radius: 5px;
+    height: 100%;
+    width: 0%;
+    transition: width 0.1 linear;
+}
   } 

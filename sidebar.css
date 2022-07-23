@@ -1,0 +1,115 @@
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgba(90, 90, 90, 0.203);
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+  }
+  
+  .sidebar a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #48be16;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  .sidebar a:hover {
+    color: #bbff00;
+  }
+  
+  .sidebar .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  
+  .openbtn {
+    font-size: 14px;
+    cursor: pointer;
+    background-color: rgba(136, 222, 102, 0.228);
+    color: rgb(55, 206, 55);
+    padding: 10px 15px;
+    border: none;
+    display: block;
+    margin:auto;
+    border:2px solid rgb(55, 206, 55);
+    border-radius: 4%;
+  }
+  
+  .openbtn:hover {
+    background-color: rgba(122, 254, 92, 0.899);
+    color: rgb(75, 75, 75);
+    transition: 0.3s;
+  }
+  
+  #main {
+    transition: margin-left .5s;
+    padding: 16px;
+  }
+  
+  /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+  @media screen and (max-height: 450px) {
+    .sidebar {padding-top: 15px;}
+    .sidebar a {font-size: 18px;}
+  }
+
+
+  @media only screen and (max-width: 700px) {
+    .sidebar {
+        width: 0px;
+        display: none;
+    }
+    .music-container{
+      width: 400px;
+    }
+    body {
+      overflow-x: hidden;
+      display: block;
+    }
+    .img-container {
+      display: none;
+    }
+  } 
+
+
+  .miniSidebar a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #48be16;
+    display: block;
+    transition: 0.3s;
+    text-align: center;
+    padding-right: 40px;
+  }
+
+  @media only screen and (min-width:700px) {
+    .miniSidebar a{
+      width: 0px;
+      display: none;
+    }
+    .miniSidebar {
+      width: 0;
+      display: none;
+    }
+    
+  }
+
+  .miniSidebar {
+    background-color:inherit;
+    width: 100%;
+  }
+
+
+  .miniSidebar a:hover {
+    color: #a8e10d;
+  }

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="sidebar.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="slider.css">
+
+
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-storage.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
+
+    <!--
+    <script>
+import { initializeApp } from "firebase/app";
+// https://firebase.google.com/docs/web/setup#available-libraries
+</script>
+-->
+    <script>
+        const firebaseConfig = {
+            apiKey: "AIzaSyCIFetmLfW5ptbNBydC8CM3WItNmgzsI8U",
+            authDomain: "my-sounds-app-7031d.firebaseapp.com",
+            databaseURL: "https://my-sounds-app-7031d-default-rtdb.europe-west1.firebasedatabase.app",
+            projectId: "my-sounds-app-7031d",
+            storageBucket: "my-sounds-app-7031d.appspot.com",
+            messagingSenderId: "280990421420",
+            appId: "1:280990421420:web:a0c58e981a5db2d680ea09"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+    </script>
+
+    <script src="auth.js" defer></script>
+    <!-- <script src="/public/app.js" defer></script> -->
+
+</head>
+
+<body>
+
+
+
+
+    
+
+    <div id="main">
+
+
+        <img id="logo" src="pngegg.png" alt="logo" >
+        <h1 class="neonText">Limewire Lite </h1>
+        
+
+        <div class="music-container">
+            <div class="music-info">
+                <h4 id="title"></h4>
+                <div class="progress-container">
+                    <div class="progress"></div>
+                </div>
+            </div>
+
+            <audio src="" id="audio"></audio>
+            <div class="img-container">
+                <img  alt="music-cover" id="cover">
+            </div>
+
+            <div class="navigation">
+                <button id="prev" class="action-btn">
+                    <i class="fas fa-backward"></i>
+                </button>
+                <button id="play" class="action-btn action-btn-big">
+                    <i class="fas fa-play"></i>
+                </button>
+                <button id="next" class="action-btn">
+                    <i class="fas fa-forward"></i>
+                </button>
+
+               <input type="range" min="0" max="100" value="100" id="volume-control"> 
+              
+               
+            </div>
+        </div>
+
+
+        <button class="openbtn" onclick="openNav(); openNavMini();">Playlist</button>
+        <button id="btntext" class="lightMode" onclick="lightMode()">Light Mode</button>
+        <section id="whenSignedOut">
+            <div id="test"></div>
+            <button id="signInBtn">Sign in with Google</button>
+        </section>
+
+        <section id="whenSignedIn" hidden="true">
+            <div id="userDetails"></div>
+            <button id="signOutBtn">Sign Out</button>
+        </section>
+
+        <div id="mySidebar" class="sidebar">
+            <a href="#" id="songs"></a>
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+            <a href="#" onclick="hereComesTheSun()">Here comes the sun</a>
+            <a href="#" onclick="whatsMyAgeAgain()">What's my age again</a>
+            <a href="#" onclick="hush()">Hush</a>
+            <a href="#" onclick="jackass()">Jackass</a>
+            <a href="#" onclick="hurricane()">Hurricane</a>
+            <a href="#" onclick="blackBlackHeart()">Black black Heart</a>
+        </div>
+    </div>
+
+    <div id="miniSidebar" class="miniSidebar">
+        <a href="#" id="songs"></a>
+        <a href="#" onclick="hereComesTheSun()">Here comes the sun</a>
+        <a href="#" onclick="whatsMyAgeAgain()">What's my age again</a>
+        <a href="#" onclick="hush()">Hush</a>
+        <a href="#" onclick="jackass()">Jackass</a>
+        <a href="#" onclick="hurricane()">Hurricane</a>
+        <a href="#" onclick="blackBlackHeart()">Black black Heart</a>
+    </div>
+</div>
+
+    <script src="script.js"></script>
+    <script src="playlist.js"></script>
+   
+    <script src="auth.js"></script>
+</body>
+
+</html>

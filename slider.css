@@ -86,7 +86,15 @@ input[type="range"]::-ms-fill-upper {
 
 
 
-
+@media only screen and (max-width: 800px) {
+  input[type='range'] {
+    overflow: hidden;
+    width: 70px;
+    -webkit-appearance: none;
+    background-color: #5b5b5b;
+    border-radius: 10px;
+  }
+} 
 
 
 

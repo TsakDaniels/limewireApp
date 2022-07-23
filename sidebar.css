@@ -63,28 +63,29 @@
   }
 
 
-  @media only screen and (max-width: 700px) {
+  @media only screen and (max-width: 800px) {
     .sidebar {
         width: 0px;
         display: none;
     }
     .music-container{
-      width: 400px;
+      width: 360px;
     }
     body {
       overflow-x: hidden;
-      display: block;
+      display: flex;
     }
     .img-container {
       display: none;
     }
+
   } 
 
 
   .miniSidebar a {
     padding: 8px 8px 8px 32px;
     text-decoration: none;
-    font-size: 25px;
+    font-size: 20px;
     color: #48be16;
     display: block;
     transition: 0.3s;
@@ -92,10 +93,11 @@
     padding-right: 40px;
   }
 
-  @media only screen and (min-width:700px) {
+  @media only screen and (min-width:800px) {
     .miniSidebar a{
       width: 0px;
       display: none;
+      
     }
     .miniSidebar {
       width: 0;

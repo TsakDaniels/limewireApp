@@ -101,7 +101,7 @@ body {
     color: rgb(246, 255, 246);
     font-size: 20px;
     cursor: pointer;
-    padding: 10px;
+    padding: 5px;
     margin: 0 20px;
 }
 
@@ -220,7 +220,7 @@ body {
     font-family:Arial, Helvetica, sans-serif;
     color: rgb(55, 206, 55);
     text-align: center;
-    margin-top: 35%;
+    margin-top: 10%;
     padding-top: 2px;
     padding-bottom: 2px;
     background-color: #282828;
@@ -263,3 +263,23 @@ body {
 
 
 
+@media only screen and (max-width: 800px) {
+    .action-btn {
+        padding: 0;
+        margin: 0px 25px;
+    }
+    
+#signInBtn {
+    margin-top: 15%;
+}
+
+#signOutBtn { 
+    margin-top: 5%;  
+}
+
+.music-container{
+    padding: 10px 0px;
+    margin: 100px 0px;
+    width: 310px;
+}
+  } 

@@ -92,7 +92,7 @@ import { initializeApp } from "firebase/app";
         </div>
 
 
-        <button class="openbtn" onclick="openNav(); openNavMini();">Playlist</button>
+        <button class="openbtn" onclick="openNav();">Playlist</button>
         <button id="btntext" class="lightMode" onclick="lightMode()">Light Mode</button>
         <section id="whenSignedOut">
             <div id="test"></div>
@@ -104,20 +104,22 @@ import { initializeApp } from "firebase/app";
             <button id="signOutBtn">Sign Out</button>
         </section>
 
-        <div id="mySidebar" class="sidebar">
+        <ul id="mySidebar" class="sidebar">
+            
+            <input type="text" id="myInput" onkeyup="searchbar()" placeholder="Search for song..." title="Type in a song">
             <a href="#" id="songs"></a>
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
-            <a href="#" onclick="hereComesTheSun()">Here comes the sun</a>
-            <a href="#" onclick="whatsMyAgeAgain()">What's my age again</a>
-            <a href="#" onclick="hush()">Hush</a>
-            <a href="#" onclick="jackass()">Jackass</a>
-            <a href="#" onclick="hurricane()">Hurricane</a>
-            <a href="#" onclick="blackBlackHeart()">Black black Heart</a>
-        </div>
+           <li> <a href="#" onclick="hereComesTheSun()">Here comes the sun</a></li>
+           <li> <a href="#" onclick="whatsMyAgeAgain()">What's my age again</a></li>
+            <li><a href="#" onclick="hush()">Hush</a></li>
+            <li><a href="#" onclick="jackass()">Jackass</a></li>
+            <li><a href="#" onclick="hurricane()">Hurricane</a></li>
+            <li><a href="#" onclick="blackBlackHeart()">Black black Heart</a></li>
+        </ul>
     </div>
 
     <div id="miniSidebar" class="miniSidebar">
-        <a href="#" id="songs"></a>
+        <a href="#"></a>
         <a href="#" onclick="hereComesTheSun()">Here comes the sun</a>
         <a href="#" onclick="whatsMyAgeAgain()">What's my age again</a>
         <a href="#" onclick="hush()">Hush</a>
@@ -125,7 +127,7 @@ import { initializeApp } from "firebase/app";
         <a href="#" onclick="hurricane()">Hurricane</a>
         <a href="#" onclick="blackBlackHeart()">Black black Heart</a>
     </div>
-</div>
+
 
     <script src="script.js"></script>
     <script src="playlist.js"></script>

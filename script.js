@@ -10,6 +10,7 @@ const cover = document.querySelector("#cover");
 
 //Song titles
 
+
 const songs = [
   "Here comes the sun",
   "What's my age again",
@@ -19,9 +20,11 @@ const songs = [
   "Black black heart",
 ];
 //document.getElementById("songs").innerHTML = songs;
+//document.getElementById("mySidebar").innerHTML = '<li>'+ songs.join('</li><li>') + '</li>'
+
 
 //keep track of songs
-let songIndex = 1;
+let songIndex = 0;
 
 //initially load song info dom
 loadSong(songs[songIndex]);
@@ -161,3 +164,23 @@ let volume = document.querySelector("#volume-control");
 volume.addEventListener("change", function (e) {
   audio.volume = e.currentTarget.value / 100;
 });
+
+
+
+//SEARCHBAR
+function searchbar() {
+  var input, filter, ul, li, a, i, txtValue;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  ul = document.getElementById("mySidebar");
+  li = ul.getElementsByTagName("li");
+  for (i = 0; i < li.length; i++) {
+      a = li[i].getElementsByTagName("a")[0];
+      txtValue = a.textContent || a.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+          li[i].style.display = "";
+      } else {
+          li[i].style.display = "none";
+      }
+  }
+}

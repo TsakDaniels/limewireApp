@@ -323,3 +323,36 @@ body {
     transition: width 0.1 linear;
 }
   } 
+
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  #myInput {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+    margin: auto;
+    width: auto;
+    padding-top: 10px;
+    border-radius: 5px;
+    border-style: none;
+    background: #fffffff0;
+    text-align: center;
+    padding-bottom: 10px;
+    outline:none;
+    font-family: 'Lato',sans-serif;
+    color: #009605;
+    font-size: 17px;
+    margin-top: 15px;
+  }
+
+  #myInput:focus{
+    background: #dcfcab;
+  }
+
+  

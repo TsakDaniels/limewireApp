@@ -19,6 +19,7 @@ const songs = [
   "Hurricane",
   "Black black heart",
 ];
+
 //document.getElementById("songs").innerHTML = songs;
 //document.getElementById("mySidebar").innerHTML = '<li>'+ songs.join('</li><li>') + '</li>'
 
@@ -32,10 +33,10 @@ loadSong(songs[songIndex]);
 //update song details
 function loadSong(song) {
   title.innerText = song;
-
   audio.src = `${song}.mp3`;
   cover.src = `${song}.jpg`;
 }
+
 
 $("#title").css("color", "rgb(100,100,100)");
 
@@ -106,23 +107,23 @@ progressContainer.addEventListener("click", setProgress);
 
 audio.addEventListener("ended", nextSong);
 
-nav = 0;
+nav = false;
 
 function openNav() {
-  if ($(window).width() > 700) {
-    if (nav == 0) {
+  if ($(window).width() > 900) {
+    if (nav == false) {
       document.getElementById("mySidebar").style.width = "250px";
-      document.getElementById("main").style.marginLeft = "250px";
-      nav = 1;
+      document.getElementById("main").style.marginLeft = "0px";
+      nav = true;
     } else {
       document.getElementById("mySidebar").style.width = "0";
       document.getElementById("main").style.marginLeft = "0";
-      nav = 0;
+      nav = false;
     }
   } else {
-    document.getElementById("mySidebar").style.width = "0";
+    document.getElementById("mySidebar").style.width = "250px";
     document.getElementById("main").style.marginLeft = "0";
-    nav = 0;
+    nav = false;
   }
 }
 
@@ -132,30 +133,29 @@ function closeNav() {
   document.getElementById("main").style.marginLeft = "0";
 }
 
-let dm = 0;
+let dm = false;
 
 function lightMode() {
-  if (dm === 0) {
-    $("body").css("background-color", "rgba(136, 222, 102, 0.30)");
+  if (dm === false) {
+    $("body").css("background-color", "rgba(156, 255, 57, 0.600)");
     $(".sidebar").css("background-color", "rgba(136, 222, 102, 0.66)");
-    //$(".sidebar a").css("color", "rgb(20, 200, 20)");
+    
     $(".music-container").css("background-color", "rgb(161, 255, 155)");
     $(".neonText").css("color", "white");
     $("#userDetails").css("background-color", " #ccffbc");
     $("#userDetails").css("border", "none");
     $("#userDetails").css("color", "rgb(55, 206, 55)");
     document.getElementById("btntext").innerHTML = "Dark Mode";
-    dm = 1;
+    dm = true;
   } else {
     $("body").css("background-color", "#141414");
     $(".sidebar").css("background-color", "rgba(90, 90, 90, 0.203)");
-    //$(".sidebar a").css("color", "#b8ff9a");
     $(".music-container").css("background-color", "rgba(134, 228, 106, 0.839)");
     $(".neonText").css("color", "rgb(23, 79, 20)");
     $("#userDetails").css("background-color", "#282828");
     $("#userDetails").css("color", "rgb(55, 206, 55)");
     document.getElementById("btntext").innerHTML = "Light Mode";
-    dm = 0;
+    dm = false;
   }
 }
 

@@ -5,8 +5,6 @@
 }
 
 body {
-    
-    
     margin: 0;
     font-family: 'Lato',sans-serif;
     /*background-image: linear-gradient(20deg, rgb(202, 202, 202),rgb(127, 204, 208),rgb(255, 255, 255) ); */
@@ -173,7 +171,7 @@ body {
     border: none;
     display: block;
     margin:auto;
-    margin-top: 40%;
+    margin-top: 25%;
     border:2px solid rgb(55, 206, 55);
     border-radius: 4%;
 }
@@ -223,8 +221,8 @@ body {
     margin-top: 10%;
     padding-top: 2px;
     padding-bottom: 2px;
-    background-color: #282828;
-    border: 4px solid rgb(37, 37, 37);
+    background-color: #1a1a1a;
+    border: 0px solid rgb(37, 37, 37);
     border-radius: 2%;
 }
 
@@ -263,7 +261,7 @@ body {
 
 
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 950px) {
     .action-btn {
         padding: 0;
         margin: 0px 25px;
@@ -355,4 +353,17 @@ body {
     background: #dcfcab;
   }
 
-  
+  @media only screen and (max-width: 950px) {
+    #main {
+        margin-left: 0px;
+    }
+
+    #playlistBtn {
+        display: none;
+    }
+  }
+
+
+  #library {
+    margin-top: 50px;
+  }

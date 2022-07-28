@@ -11,9 +11,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
         integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100" rel="stylesheet">
     <link rel="stylesheet" href="sidebar.css">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="slider.css">
+   
 
 
     <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
@@ -47,12 +49,9 @@ import { initializeApp } from "firebase/app";
 
 </head>
 
-<body>
+<body class="bg">
 
-
-
-
-    
+ 
 
     <div id="main">
 
@@ -91,8 +90,8 @@ import { initializeApp } from "firebase/app";
             </div>
         </div>
 
-
-        <button class="openbtn" onclick="openNav();">Playlist</button>
+        
+        <button id="playlistBtn" class="openbtn" onclick="openNav();">Playlist</button>
         <button id="btntext" class="lightMode" onclick="lightMode()">Light Mode</button>
         <section id="whenSignedOut">
             <div id="test"></div>
@@ -104,13 +103,18 @@ import { initializeApp } from "firebase/app";
             <button id="signOutBtn">Sign Out</button>
         </section>
 
+        <button id="library" class="openbtn" onclick="window.location.href='./library.html'">Library</button>
+
+
+         
+
         <ul id="mySidebar" class="sidebar">
             
             <input type="text" id="myInput" onkeyup="searchbar()" placeholder="Search for song..." title="Type in a song">
             <a href="#" id="songs"></a>
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
            <li> <a href="#" onclick="hereComesTheSun()">Here comes the sun</a></li>
-           <li> <a href="#" onclick="whatsMyAgeAgain()">What's my age again</a></li>
+           <li> <a href="#" onclick="whatsMyAgeAgain()">What"s my age again</a></li>
             <li><a href="#" onclick="hush()">Hush</a></li>
             <li><a href="#" onclick="jackass()">Jackass</a></li>
             <li><a href="#" onclick="hurricane()">Hurricane</a></li>
@@ -121,7 +125,7 @@ import { initializeApp } from "firebase/app";
     <div id="miniSidebar" class="miniSidebar">
         <a href="#"></a>
         <a href="#" onclick="hereComesTheSun()">Here comes the sun</a>
-        <a href="#" onclick="whatsMyAgeAgain()">What's my age again</a>
+        <a href="#" onclick="whatsMyAgeAgain()">What"s my age again</a>
         <a href="#" onclick="hush()">Hush</a>
         <a href="#" onclick="jackass()">Jackass</a>
         <a href="#" onclick="hurricane()">Hurricane</a>

@@ -17,7 +17,8 @@ auth.onAuthStateChanged(user => {
     if (user) {
         whenSignedIn.hidden = false;
         whenSignedOut.hidden = true;
-        userDetails.innerHTML = `<h3> Hello ${user.displayName}!</h3> <p>User email: ${user.email}</p> <p>User id: ${user.uid}</p>`;
+        userDetails.innerHTML = `<h3> Hello ${user.displayName}!</h3>`;
+        //<p>User email: ${user.email}</p> <p>User id: ${user.uid}</p>
     } else {
         whenSignedIn.hidden = true;
         whenSignedOut.hidden = false;

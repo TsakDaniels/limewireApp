@@ -86,7 +86,7 @@ input[type="range"]::-ms-fill-upper {
 
 
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 950px) {
   input[type='range'] {
     overflow: hidden;
     width: 70px;

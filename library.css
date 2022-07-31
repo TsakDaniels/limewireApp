@@ -1,0 +1,254 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@700&display=swap');
+body{
+    margin: 0;
+    font-family: 'Lato',sans-serif;
+    /*background-image: linear-gradient(20deg, rgb(202, 202, 202),rgb(127, 204, 208),rgb(255, 255, 255) ); */
+    background-color: #141414;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+    transition: 0.4s;
+}
+
+.upload-area{
+    margin-top: 2%;
+    text-align: left;
+    width: 100%;
+    line-height: 70px;
+    border-radius: 8px;
+}
+.upload{
+    font-size: 14px;
+    cursor: pointer;
+    background-color: rgba(136, 222, 102, 0.16);
+    color: rgb(55, 206, 55);
+    padding: 10px 15px;
+    border: none;
+    margin: auto;
+    display: block;
+    border:2px solid rgb(55, 206, 55);
+    border-radius: 4%;
+    margin-top: 5%;
+}
+
+.upload:hover {
+    background-color: rgba(122, 254, 92, 0.899);
+    color: rgb(75, 75, 75);
+    transition: 0.3s;
+}
+
+.upload:active{
+    border-color: white;
+}
+.progress-container{
+    background: rgba(255, 255, 255, 0.059);
+    border-radius: 5px;
+    cursor: pointer;
+    margin:10px 0;
+    height: 15px;
+    width: 30%;
+    margin: auto;
+}
+.progress{
+    box-shadow: 0px 0px 10px #24fd2b, 0px 0px 20px #24fd2b, 0px 0px 40px #24fd2b;
+    background-color: #24fd2b;
+    border-radius: 50px;
+    height: 100%;
+    width: 100%;
+    transition: width 10 linear;
+}
+
+h2 {
+    text-align: center;
+    color: #50f755;
+}
+.percent{
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    color: #4ff655;
+}
+.controls{
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+}
+.pause, .resume, .cancel{
+    background-color: rgb(84, 204, 48);
+    fill: white;
+    padding: 5px;
+    margin: 5px;
+    margin-top: 18px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.pause:hover{
+    background-color: white;
+    fill: rgb(84, 204, 48);
+    transition: 0.35s;
+}
+.resume:hover{
+    background-color: white;
+    fill: rgb(84, 204, 48);
+    transition: 0.35s;
+}
+.cancel:hover{
+    background-color: white;
+    fill: rgb(84, 204, 48);
+    transition: 0.35s;
+}
+.resume{
+    display: none;
+}
+
+.all-files{
+    text-align: left;
+    padding: 20px;
+}
+
+.all-files ul{
+    position: relative;
+    left: -15px;
+}
+.all-files ul li{
+    list-style: none;
+    background-color: rgba(124, 248, 79, 0.892);
+    display: inline-block;
+    padding: 10px;
+    padding-right: 45px;
+    color: rgb(24, 24, 24);
+    width: 300px;
+    border-radius: 3px;
+    margin: 5px;
+    cursor: default;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    position: relative;
+}
+.all-files ul li svg{
+    fill: white;
+    position: absolute;
+    right: 10px;
+    top: 7px;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+.expand-container{
+    width: 100px;
+    border-radius: 4px;
+    background-color: white;
+    position: absolute;
+    height: 75px;
+    display: flex;
+}
+.expand-container ul li{
+    list-style: none;
+    font-size: 14px;
+    text-align: left;
+    margin: 4px;
+    margin-left: 5px;
+    color: rgb(29, 29, 29);
+    position: relative;
+    left: -40px;
+    top: -10px;
+    cursor: pointer;
+}
+.expand-container:hover {
+    background-color: rgb(191, 191, 191);
+    transition: 0.35s;
+}
+.expand-container ul li:hover{
+    color: rgb(106, 255, 46);
+    transition: 0.2s;
+}
+.loader{
+    animation: rotate 1.5s linear infinite;
+    width: 30px;
+    margin-top: 15px;
+    margin-left: 25px;
+    display: none;
+}
+@keyframes rotate{
+    to{transform: rotate(360deg);}
+}
+
+
+#back {
+    font-size: 14px;
+    cursor: pointer;
+    background-color: rgba(136, 222, 102, 0.16);
+    color: rgb(55, 206, 55);
+    padding: 10px 15px;
+    border: none;
+    margin: auto;
+    display: block;
+    border:2px solid rgb(55, 206, 55);
+    border-radius: 4%;
+    margin-top: 5%;
+}
+
+#back:hover {
+    background-color: rgba(122, 254, 92, 0.899);
+    color: rgb(75, 75, 75);
+    transition: 0.3s;
+    
+}
+
+
+#logo {
+    
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    margin: auto;
+    width:40px; 
+    height:40px;
+    opacity: 50%;
+}
+
+.neonText {
+    color: rgb(23, 79, 20);
+    text-shadow:
+        0 0 7px rgb(144, 241, 157),
+        0 0 10px rgb(89, 210, 91),
+        0 0 21px rgb(71, 229, 84),
+        0 0 42px rgb(33, 185, 79),
+        0 0 60px rgb(24, 152, 28)
+  }
+
+  .logo {
+    margin-top: 2%;
+  }
+
+  .lightMode {
+    font-size: 14px;
+    cursor: pointer;
+    background-color: rgba(136, 222, 102, 0.16);
+    color: rgb(55, 206, 55);
+    padding: 10px 15px;
+    border: none;
+    margin: auto;
+    display: block;
+    border:2px solid rgb(55, 206, 55);
+    border-radius: 4%;
+    margin-top: 2%;
+  }
+
+  .lightMode:hover{
+    background-color: rgba(122, 254, 92, 0.899);
+    color: rgb(75, 75, 75);
+    transition: 0.3s;
+}
+
+ul {
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10%;
+}

@@ -152,14 +152,14 @@ function openFile(v){
     var path = v.parentElement.getAttribute('data-file-name');
     var storageRef = firebase.storage().ref(path);
     expandContainerUl.style.display = 'none';
-    loader.style.display = 'block';
+    
     storageRef.getDownloadURL()
     .then((url) => {
         var a = document.createElement('a');
         a.href = url;
         a.target = '_blank';
         a.click();
-        shrink();
+        
     })
     .catch((error) => {
         // if any error
@@ -172,7 +172,7 @@ function downloadFile(v){
     var path = v.parentElement.getAttribute('data-file-name');
     var storageRef = firebase.storage().ref(path);
     expandContainerUl.style.display = 'none';
-    loader.style.display = 'block';
+   
     storageRef.getDownloadURL()
     .then((url) => {
         var xhr = new XMLHttpRequest();
@@ -211,7 +211,6 @@ function deleteFile(v){
     var metadata = JSON.parse(localStorage.getItem('uploaded-metadata'));
     var index = metadata.indexOf(path);
     expandContainerUl.style.display = 'none';
-    loader.style.display = 'block';
     storageRef.delete().then(() => {
         if(index > -1){
             // remove the path index and again save in localstorage

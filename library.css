@@ -116,7 +116,7 @@ h2 {
 }
 .all-files ul li{
     list-style: none;
-    background-color: rgba(124, 248, 79, 0.892);
+    background-color: rgb(124, 248, 79);
     display: inline-block;
     padding: 10px;
     padding-right: 45px;
@@ -140,12 +140,19 @@ h2 {
     cursor: pointer;
 }
 .expand-container{
-    width: 100px;
-    border-radius: 4px;
-    background-color: white;
-    position: absolute;
-    height: 75px;
-    display: flex;
+    display: none;
+  position:fixed;
+  min-width: 50px;
+  margin-top: 4px;
+  padding: 10px 7px;
+  z-index: 1;
+  background-color: rgb(124, 248, 79);
+  border-radius: 1px;
+}
+
+#audio {
+    position: relative;
+    display: inline-block;
 }
 .expand-container ul li{
     list-style: none;
@@ -160,23 +167,14 @@ h2 {
     cursor: pointer;
 }
 .expand-container:hover {
-    background-color: rgb(191, 191, 191);
     transition: 0.35s;
+    
 }
 .expand-container ul li:hover{
-    color: rgb(106, 255, 46);
+    color: white;
     transition: 0.2s;
 }
-.loader{
-    animation: rotate 1.5s linear infinite;
-    width: 30px;
-    margin-top: 15px;
-    margin-left: 25px;
-    display: none;
-}
-@keyframes rotate{
-    to{transform: rotate(360deg);}
-}
+
 
 
 #back {

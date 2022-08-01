@@ -230,7 +230,7 @@ let x = false;
 
 function lightMode2() {
   if (x === false) {
-    $("body").css("background-color", "rgba(156, 255, 57, 0.600)");
+    $("body").css("background-color", "rgba(103, 235, 0, 0.600)");
     $(".neonText").css("color", "white");
     document.getElementById("btntext2").innerHTML = "Dark Mode";
     x = true;
@@ -241,4 +241,6 @@ function lightMode2() {
     x = false;
   }
 }
+
+
 

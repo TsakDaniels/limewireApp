@@ -137,7 +137,7 @@ let dm = false;
 
 function lightMode() {
   if (dm === false) {
-    $("body").css("background-color", "rgba(156, 255, 57, 0.600)");
+    $("body").css("background-color", "rgba(103, 235, 0, 0.600)");
     $(".sidebar").css("background-color", "rgba(136, 222, 102, 0.66)");
     
     $(".music-container").css("background-color", "rgb(161, 255, 155)");
